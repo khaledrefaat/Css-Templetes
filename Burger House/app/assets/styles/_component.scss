@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+
+// Section suggestion
+
+.section-suggestion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+
+    &__big--item {
+        margin-right: 4rem;
+    }
+
+    &__small--item {
+        position: relative;
+    }
+
+    &__small--item:not(:first-of-type) {
+        margin-top: 2rem;
+    }
+
+    &__small--item:after {
+        position: absolute;
+        top: 0;
+        left: 5%;
+        color: var(--color-white);
+        font-size: 3rem;
+        max-width: 22rem;
+    }
+
+    &__small--item:not(:last-of-type):after {
+        content: 'Try It Today MORE FUN MORE TASTE';
+     }
+    &__small--item:not(:first-of-type):after {
+         content: 'Try It Today FRESH&CHILI';
+     }
+
+     &__big--photo,
+     &__small--photo {
+         width: 100%;
+         border-radius: 1rem;
+     }
+
+     &__big--photo {
+        filter: brightness(80%);
+        transform: scale(1.05);
+    }
+
+    &__small--photo {
+        filter: brightness(60%);
+    }
+ 
+}
+
+
+
+
+// Utilites
+
+.wrapper {
+    padding: 5rem 7rem;
+}
