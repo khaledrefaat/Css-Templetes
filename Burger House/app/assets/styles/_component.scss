@@ -1,19 +1,111 @@
+// Utilites
 
+.wrapper {@media only screen and(min-width: $bp-small) {padding: 5rem 7rem;}}
+.center {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-
-
-
-
-
-
-// Section suggestion
-
-.section-suggestion {
+.center-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: hidden;
     flex-direction: column;
+}
+
+.mt-small{margin-top: 1rem}
+.mt-medium{margin-top: 2.5rem}
+.mt-large{margin-top: 5rem}
+
+.mb-small{margin-bottom: 1rem}
+.mb-medium{margin-bottom: 2.5rem}
+.mb-large{margin-bottom: 5rem}
+
+// typography style
+
+.heading {
+    &-1,
+    &-2,
+    &-3 {
+        text-transform: uppercase;
+        color: var(--color-font);
+    }
+
+    &-1 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    &-2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &-3 {font-size: 1.4rem;}
+
+    &-3__background {
+        background-color: var(--color-primary-light);
+        padding: .5rem 1rem;
+        cursor: pointer;
+        box-shadow:  0 0 0 rgba(0, 0, 0, 0);
+        transform: skewX(0) skewY(0) scale(1);
+        transition: all .3s ease-out;
+    }
+
+    &-3__background:hover {
+        transform: skewX(15deg) skewY(2deg) scale(1.1);
+        box-shadow: var(--shadow-dark);
+    }
+}
+
+.paragraph {
+    max-width: 100rem;
+    font-size: 1.4rem;
+    color: var(--color-grey-dark-2);
+}
+
+.paragraph-small {
+    max-width: 30rem;
+}
+
+
+// btn style
+
+.btn {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--color-white);
+    border: none;
+    border-radius: .5rem;
+    transition: all .3s ease-out;
+    transform: translateY(0);
+    outline: none;
+}
+
+.btn-red {
+    background-color: var(--color-secondary);
+};
+
+.btn-red:hover {
+    background-color: var(--color-secondary-light);
+    box-shadow: var(--shadow-dark);
+};
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    
+}
+
+
+
+// Section Suggestion
+
+.section-suggestion {
+    overflow-y: hidden;
     
     @media only screen and(min-width: $bp-medium) {flex-direction: row;}
     &__big,
@@ -72,6 +164,35 @@
      }
 }
 
-// Utilites
 
-.wrapper {@media only screen and(min-width: $bp-small) {padding: 5rem 7rem;}}
+// Section Choose
+
+.section-choose {
+    margin-top: 6rem;
+    @media only screen and(min-width: $bp-medium) {margin-top: 0};
+
+    &__item--container {
+        display: flex;
+        flex-direction: column;
+        @media only screen and(min-width: $bp-medium) {
+            flex-direction: row;
+            margin: 2rem;
+        }
+    }
+
+    &__item {
+        margin-bottom: 4rem;
+        @media only screen and(min-width: $bp-medium) {
+            margin: 1rem;
+        }
+    }
+
+    &__item:first-of-type {
+        margin-top: 4rem;
+        @media only screen and(min-width: $bp-medium) {margin-top: 0}
+    }
+
+    &__item--img {
+        width: 100%;
+    }
+}
