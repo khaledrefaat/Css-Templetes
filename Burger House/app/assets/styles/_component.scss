@@ -1,0 +1,76 @@
+
+
+
+
+
+
+
+
+// Section suggestion
+
+.section-suggestion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    flex-direction: column;
+    
+    @media only screen and(min-width: $bp-medium) {flex-direction: row;}
+    &__big,
+    &__small {width: 100%;}
+
+
+    &__big {@media only screen and(min-width: $bp-medium) {margin-right: 4rem;}}
+
+    &__big--item {position: relative;}
+
+    &__small--item {position: relative;}
+
+    &__small--item:not(:first-of-type) {margin-top: 2rem;}
+
+    &__big--item:before,
+    &__small--item:after,
+    &__big--item:after{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        color: var(--color-white);
+        font-size: 2rem;
+        font-weight: 700;
+        max-width: 15rem;
+    }
+
+    // i did before here to break the word in two lines
+    &__big--item:before {
+        content: 'Try It Today';
+        z-index: 2;
+    }
+
+    &__big--item:after {
+        content: 'MOST POUPULAR BUARGER';
+        top: 7%;
+        max-width: 40rem;
+    }
+
+    &__small--item:not(:last-of-type):after {content: 'Try It Today MORE FUN MORE TASTE';}
+    &__small--item:not(:first-of-type):after {content: 'Try It Today FRESH&CHILI';}
+
+     &__big--photo,
+     &__small--photo {
+         width: 100%;
+         border-radius: 1rem;
+        filter: brightness(60%);
+     }
+
+     &__big--photo {
+        margin-bottom: 2rem;
+        @media only screen and(min-width: $bp-medium) {
+            transform: scale(1.05);
+            margin-bottom: 0;
+        }
+     }
+}
+
+// Utilites
+
+.wrapper {@media only screen and(min-width: $bp-small) {padding: 5rem 7rem;}}
