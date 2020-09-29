@@ -1,198 +1,277 @@
 // Utilites
 
-.wrapper {@media only screen and(min-width: $bp-small) {padding: 5rem 7rem;}}
+.wrapper {
+	@media only screen and(min-width: $bp-small) {
+		padding: 5rem 7rem;
+	}
+}
 .center {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .center-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
-.mt-small{margin-top: 1rem}
-.mt-medium{margin-top: 2.5rem}
-.mt-large{margin-top: 5rem}
+.mt-small {
+	margin-top: 1rem;
+}
+.mt-medium {
+	margin-top: 2.5rem;
+}
+.mt-large {
+	margin-top: 5rem;
+}
 
-.mb-small{margin-bottom: 1rem}
-.mb-medium{margin-bottom: 2.5rem}
-.mb-large{margin-bottom: 5rem}
+.mb-small {
+	margin-bottom: 1rem;
+}
+.mb-medium {
+	margin-bottom: 2.5rem;
+}
+.mb-large {
+	margin-bottom: 5rem;
+}
 
 // typography style
 
 .heading {
-    &-1,
-    &-2,
-    &-3 {
-        text-transform: uppercase;
-        color: var(--color-font);
-    }
+	&-1,
+	&-2,
+	&-3 {
+		text-transform: uppercase;
+		color: var(--color-font);
+	}
 
-    &-1 {
-        font-size: 4rem;
-        font-weight: 900;
-    }
+	&-1 {
+		font-size: 4rem;
+		font-weight: 900;
+	}
 
-    &-2 {
-        font-size: 1.8rem;
-        font-weight: 700;
-    }
+	&-2 {
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
 
-    &-3 {font-size: 1.4rem;}
+	&-3 {
+		font-size: 1.4rem;
+	}
 
-    &-3__background {
-        background-color: var(--color-primary-light);
-        padding: .5rem 1rem;
-        cursor: pointer;
-        box-shadow:  0 0 0 rgba(0, 0, 0, 0);
-        transform: skewX(0) skewY(0) scale(1);
-        transition: all .3s ease-out;
-    }
+	&-3__background {
+		background-color: var(--color-primary-light);
+		padding: .5rem 1rem;
+		cursor: pointer;
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		transform: skewX(0) skewY(0) scale(1);
+		transition: all .3s ease-out;
+	}
 
-    &-3__background:hover {
-        transform: skewX(15deg) skewY(2deg) scale(1.1);
-        box-shadow: var(--shadow-dark);
-    }
+	&-3__background:hover {
+		transform: skewX(15deg) skewY(-2deg) scale(1.1);
+		box-shadow: var(--shadow-dark);
+	}
+
+	&-4 {
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		color: var(--color-grey-dark-1);
+		margin-bottom: -1rem; // to make the look like the psd i coded the template from
+	}
 }
 
 .paragraph {
-    max-width: 100rem;
-    font-size: 1.4rem;
-    color: var(--color-grey-dark-2);
+	max-width: 100rem;
+	font-size: 1.4rem;
+	color: var(--color-grey-dark-2);
 }
 
 .paragraph-small {
-    max-width: 30rem;
+	max-width: 30rem;
 }
-
+.paragraph-medium {
+	max-width: 90rem;
+	@media only screen and(min-width: $bp-medium) {
+		max-width: 50rem;
+	}
+}
 
 // btn style
 
 .btn {
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 700;
-    color: var(--color-white);
-    border: none;
-    border-radius: .5rem;
-    transition: all .3s ease-out;
-    transform: translateY(0);
-    outline: none;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: 700;
+	color: var(--color-white);
+	border: none;
+	border-radius: .5rem;
+	transition: all .3s ease-out;
+	transform: translateY(0);
+	outline: none;
 }
 
 .btn-red {
-    background-color: var(--color-secondary);
-};
-
-.btn-red:hover {
-    background-color: var(--color-secondary-light);
-    box-shadow: var(--shadow-dark);
-};
-
-.btn:active {
-    transform: translateY(3px);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
-    
+	background-color: var(--color-secondary);
 }
 
+.btn-red:hover {
+	background-color: var(--color-secondary-light);
+	box-shadow: var(--shadow-dark);
+}
 
+.btn:active {
+	transform: translateY(3px);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+}
 
 // Section Suggestion
 
 .section-suggestion {
-    overflow-y: hidden;
-    
-    @media only screen and(min-width: $bp-medium) {flex-direction: row;}
-    &__big,
-    &__small {width: 100%;}
+	overflow-y: hidden;
 
+	@media only screen and(min-width: $bp-medium) {
+		flex-direction: row;
+	}
+	&__big,
+	&__small {
+		width: 100%;
+	}
 
-    &__big {@media only screen and(min-width: $bp-medium) {margin-right: 4rem;}}
+	&__big {
+		@media only screen and(min-width: $bp-medium) {
+			margin-right: 4rem;
+		}
+	}
 
-    &__big--item {position: relative;}
+	&__big--item {
+		position: relative;
+	}
 
-    &__small--item {position: relative;}
+	&__small--item {
+		position: relative;
+	}
 
-    &__small--item:not(:first-of-type) {margin-top: 2rem;}
+	&__small--item:not(:first-of-type) {
+		margin-top: 2rem;
+	}
 
-    &__big--item:before,
-    &__small--item:after,
-    &__big--item:after{
-        position: absolute;
-        top: 0;
-        left: 5%;
-        color: var(--color-white);
-        font-size: 2rem;
-        font-weight: 700;
-        max-width: 15rem;
-        line-height: 1.4;
-    }
+	&__big--item:before,
+	&__small--item:after,
+	&__big--item:after {
+		position: absolute;
+		top: 0;
+		left: 5%;
+		color: var(--color-white);
+		font-size: 2rem;
+		font-weight: 700;
+		max-width: 15rem;
+		line-height: 1.4;
+	}
 
-    // i did before here to break the word in two lines
-    &__big--item:before {
-        content: 'Try It Today';
-        z-index: 2;
-    }
+	// i did before here to break the word in two lines
+	&__big--item:before {
+		content: 'Try It Today';
+		z-index: 2;
+	}
 
-    &__big--item:after {
-        content: 'MOST POUPULAR BUARGER';
-        top: 7%;
-        max-width: 40rem;
-    }
+	&__big--item:after {
+		content: 'MOST POUPULAR BUARGER';
+		top: 7%;
+		max-width: 40rem;
+	}
 
-    &__small--item:not(:last-of-type):after {content: 'Try It Today MORE FUN MORE TASTE';}
-    &__small--item:not(:first-of-type):after {content: 'Try It Today FRESH&CHILI';}
+	&__small--item:not(:last-of-type):after {
+		content: 'Try It Today MORE FUN MORE TASTE';
+	}
+	&__small--item:not(:first-of-type):after {
+		content: 'Try It Today FRESH&CHILI';
+	}
 
-     &__big--photo,
-     &__small--photo {
-         width: 100%;
-         border-radius: 1rem;
-        filter: brightness(60%);
-     }
+	&__big--photo,
+	&__small--photo {
+		width: 100%;
+		border-radius: 1rem;
+		filter: brightness(60%);
+	}
 
-     &__big--photo {
-        margin-bottom: 2rem;
-        @media only screen and(min-width: $bp-medium) {
-            transform: scale(1.05);
-            margin-bottom: 0;
-        }
-     }
+	&__big--photo {
+		margin-bottom: 2rem;
+		@media only screen and(min-width: $bp-medium) {
+			transform: scale(1.05);
+			margin-bottom: 0;
+		}
+	}
 }
-
 
 // Section Choose
 
 .section-choose {
-    margin-top: 6rem;
-    @media only screen and(min-width: $bp-medium) {margin-top: 0};
+	margin-top: 6rem;
+	@media only screen and(min-width: $bp-medium) {
+		margin-top: 0;
+	}
 
-    &__item--container {
-        display: flex;
-        flex-direction: column;
-        @media only screen and(min-width: $bp-medium) {
-            flex-direction: row;
-            margin: 2rem;
-        }
-    }
+	&__item--container {
+		display: flex;
+		flex-direction: column;
+		@media only screen and(min-width: $bp-medium) {
+			flex-direction: row;
+			margin: 2rem;
+		}
+	}
 
-    &__item {
-        margin-bottom: 4rem;
-        @media only screen and(min-width: $bp-medium) {
-            margin: 1rem;
-        }
-    }
+	&__item {
+		margin-bottom: 4rem;
+		@media only screen and(min-width: $bp-medium) {
+			margin: 1rem;
+		}
+	}
 
-    &__item:first-of-type {
-        margin-top: 4rem;
-        @media only screen and(min-width: $bp-medium) {margin-top: 0}
-    }
+	&__item:first-of-type {
+		margin-top: 4rem;
+		@media only screen and(min-width: $bp-medium) {
+			margin-top: 0;
+		}
+	}
 
-    &__item--img {
-        width: 100%;
-    }
+	&__item--img {
+		width: 100%;
+	}
+}
+
+// section events
+
+.section-events {
+	display: flex;
+	flex-direction: column;
+	@media only screen and(min-width: $bp-medium) {
+		flex-direction: row;
+	}
+	&__content {
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 2rem;
+		@media only screen and(min-width: $bp-medium) {
+			margin-right: auto;
+			text-align: left;
+			margin-left: 0;
+			padding: 0rem;
+		}
+	}
+
+	&__img-box {
+		@media only screen and(min-width: $bp-medium) {
+			width: 50%;
+		}
+	}
+
+	&__img {
+		width: 100%;
+	}
 }
