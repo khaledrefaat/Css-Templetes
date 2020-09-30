@@ -1,6 +1,7 @@
 // Utilites
 
 .wrapper {
+	padding-top: 6rem;
 	@media only screen and(min-width: $bp-small) {
 		padding: 5rem 7rem;
 	}
@@ -72,7 +73,7 @@
 	}
 
 	&-3__background:hover {
-		transform: skewX(15deg) skewY(-2deg) scale(1.1);
+		transform: skewX(15deg) skewY(2deg) scale(1.1);
 		box-shadow: var(--shadow-dark);
 	}
 
@@ -211,7 +212,7 @@
 // Section Choose
 
 .section-choose {
-	margin-top: 6rem;
+	// margin-top: 6rem;
 	@media only screen and(min-width: $bp-medium) {
 		margin-top: 0;
 	}
@@ -221,12 +222,12 @@
 		flex-direction: column;
 		@media only screen and(min-width: $bp-medium) {
 			flex-direction: row;
-			margin: 2rem;
+			// margin: 2rem;
 		}
 	}
 
 	&__item {
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 		@media only screen and(min-width: $bp-medium) {
 			margin: 1rem;
 		}
@@ -257,12 +258,36 @@
 		margin-right: auto;
 		margin-left: auto;
 		padding: 2rem;
+		position: relative;
 		@media only screen and(min-width: $bp-medium) {
 			margin-right: auto;
-			text-align: left;
 			margin-left: 0;
+			text-align: left;
 			padding: 0rem;
 		}
+	}
+
+	&__dots {
+		display: none;
+		@media only screen and(min-width: $bp-medium) {
+			display: flex;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__dots div {
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: var(--color-grey-dark-3);
+		margin-left: .5rem;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	&__dots div:first-of-type {
+		background-color: var(--color-primary);
 	}
 
 	&__img-box {
