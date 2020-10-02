@@ -1,5 +1,4 @@
 // Utilites
-
 .wrapper {
 	padding-top: 6rem;
 	@media only screen and(min-width: $bp-small) {
@@ -42,28 +41,28 @@
 // typography style
 
 .heading {
-	&-1,
 	&-2,
-	&-3 {
+	&-3,
+	&-4 {
 		text-transform: uppercase;
 		color: var(--color-font);
 	}
 
-	&-1 {
+	&-2 {
 		font-size: 4rem;
 		font-weight: 900;
 	}
 
-	&-2 {
+	&-3 {
 		font-size: 1.8rem;
 		font-weight: 700;
 	}
 
-	&-3 {
+	&-4 {
 		font-size: 1.4rem;
 	}
 
-	&-3__background {
+	&-4__background {
 		background-color: var(--color-primary-light);
 		padding: .5rem 1rem;
 		cursor: pointer;
@@ -72,12 +71,12 @@
 		transition: all .3s ease-out;
 	}
 
-	&-3__background:hover {
+	&-4__background:hover {
 		transform: skewX(15deg) skewY(2deg) scale(1.1);
 		box-shadow: var(--shadow-dark);
 	}
 
-	&-4 {
+	&-5 {
 		font-size: 1.8rem;
 		text-transform: uppercase;
 		color: var(--color-grey-dark-1);
@@ -325,6 +324,8 @@
 		border: none;
 		margin: 1rem;
 		background-color: var(--color-primary);
+		@media only screen and(min-width: $bp-smallest) {
+		}
 	}
 
 	::placeholder {
@@ -335,80 +336,13 @@
 	}
 
 	.btn {
-		padding: 1rem 7rem;
-		margin-left: 1rem;
+		padding: 1rem 6.7rem;
+		margin: 1rem;
 		@media only screen and(min-width: $bp-medium) {
-			padding: 1rem 6.8rem;
+			padding: 1rem 7rem;
 		}
 		@media only screen and(min-width: $bp-large) {
 			padding: 1rem 8rem;
 		}
-	}
-}
-
-// footer
-
-.footer {
-	padding: 5rem 3rem 1rem 3rem;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/footer-background.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-attachment: fixed;
-	margin-top: 5rem;
-	display: grid;
-	grid-row: 1fr;
-	grid-row-gap: 3rem;
-	text-align: center;
-	@media only screen and(min-width: $bp-smallest) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-row-gap: 7rem;
-		margin-top: 0;
-	}
-
-	.heading-1 {
-		grid-column: 1 / -1;
-	}
-
-	&__icons,
-	&__social {
-		@media only screen and(min-width: $bp-smallest) {
-			margin-left: auto;
-		}
-	}
-
-	.icon {
-		margin-right: 1rem;
-		font-size: 2rem;
-	}
-
-	&__copyright {
-		@media only screen and(min-width: $bp-smallest) {
-			margin-right: auto;
-		}
-	}
-
-	&__copyright,
-	&__social {
-		margin-top: auto;
-	}
-
-	&__social .icon {
-		font-size: 2.5rem;
-		color: var(--color-white);
-		cursor: pointer;
-		transition: color .3s ease-out;
-	}
-	.instagram:hover {
-		color: #e4405f;
-	}
-	.facebook:hover {
-		color: #3b5999;
-	}
-	.twitter:hover {
-		color: #55acee;
-	}
-	.whatsapp:hover {
-		color: #25d366;
 	}
 }
