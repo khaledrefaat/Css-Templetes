@@ -54,6 +54,9 @@
 		font-size: 7rem;
 		font-weight: 900;
 	}
+	&-1__small {
+		font-size: 4rem;
+	}
 
 	&-2 {
 		font-size: 4rem;
@@ -88,6 +91,11 @@
 		text-transform: uppercase;
 		color: var(--color-grey-dark-1);
 		margin-bottom: -1rem; // to make the look like the psd i coded the template from
+	}
+
+	&-5__bold {
+		font-weight: 900;
+		font-size: 2.2rem;
 	}
 
 	&-6 {
