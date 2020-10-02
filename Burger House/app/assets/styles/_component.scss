@@ -41,11 +41,18 @@
 // typography style
 
 .heading {
+	&-1,
 	&-2,
 	&-3,
-	&-4 {
+	&-4,
+	&-6 {
 		text-transform: uppercase;
 		color: var(--color-font);
+	}
+
+	&-1 {
+		font-size: 7rem;
+		font-weight: 900;
 	}
 
 	&-2 {
@@ -81,6 +88,13 @@
 		text-transform: uppercase;
 		color: var(--color-grey-dark-1);
 		margin-bottom: -1rem; // to make the look like the psd i coded the template from
+	}
+
+	&-6 {
+		font-size: 1.4rem;
+		border: 2px dashed var(--color-font);
+		display: inline-block;
+		padding: .5rem;
 	}
 }
 

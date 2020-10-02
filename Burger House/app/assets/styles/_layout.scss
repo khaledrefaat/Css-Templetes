@@ -1,5 +1,22 @@
 // header
 .header {
+	background-image: linear-gradient(rgba(252, 189, 0, .9), rgba(252, 189, 0, .9)),
+		url('../images/header-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	height: 90vh;
+
+	.heading-1 {
+		user-select: none;
+	}
+
+	.heading-1:last-of-type {
+		// the make the word "week" closer to the word "burger:
+		margin-top: -4rem;
+		font-size: 4rem;
+	}
 }
 
 // footer
