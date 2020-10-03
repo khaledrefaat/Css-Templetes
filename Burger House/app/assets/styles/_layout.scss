@@ -24,10 +24,11 @@
 		@media only screen and(min-width: $bp-medium) {
 			height: auto;
 			width: 100%;
-			position: absolute;
 			flex-direction: row;
 			background-color: transparent;
 			transform: translateX(0);
+			background-color: var(--color-font);
+			padding: 1rem 2rem;
 		}
 	}
 
@@ -37,12 +38,10 @@
 
 	.heading-5 {
 		margin-top: 2rem;
-		color: #fff;
 		cursor: pointer;
+		color: var(--color-white);
 		@media only screen and(min-width: $bp-medium) {
-			margin-left: 2rem;
 			margin-top: 0;
-			color: var(--color-font);
 		}
 	}
 
@@ -63,7 +62,12 @@
 	}
 
 	&__item {
-		padding: 1rem;
+		padding: 1rem 4rem;
+		background-color: transparent;
+		transition: all .3s ease-out;
+		@media only screen and(min-width: $bp-medium) {
+			padding: 1rem;
+		}
 	}
 
 	&__link {
@@ -76,12 +80,20 @@
 		color: #fff;
 
 		@media only screen and(min-width: $bp-medium) {
-			color: var(--color-font);
+			color: var(--color-white);
 		}
 	}
 
 	&__item:hover > &__link {
 		color: var(--color-grey-light-2);
+	}
+
+	&__item:active,
+	&__item:hover {
+		background-color: var(--color-primary);
+		@media only screen and(min-width: $bp-medium) {
+			background-color: transparent;
+		}
 	}
 
 	// mobile nav style
